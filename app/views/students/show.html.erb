@@ -1,8 +1,13 @@
 <h1>Student: <%= @student.name %></h1>
+<p>
+  <%= link_to 'Edit|Student', edit_student_path(@student) %>
+</p>
+
 <% if @student.result.present? %>
   <p><strong>Result</strong> <%= @student.result.marks %></p>
   <p>
-    <%= link_to "Update", student_result_path(@student) %>
+    <%= link_to "show", student_result_path(@student) %>
+    <%= link_to "Update", edit_student_result_path(@student) %>
      <%= link_to 'Delete', student_result_path(@student), method: :delete, data: { turbo_method: :delete, confirm: 'Are you sure you want to delete?'} %>
   </p>
 <% else %>

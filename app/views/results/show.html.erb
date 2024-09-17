@@ -1,7 +1,3 @@
 <h1>Results for <%= @student.name %></h1>
 
 <p>Marks: <%= @result.marks %></p>
-<%= form_for([@student, @result], url: { controller: 'results', action: 'update' }) do |form| %>
-  <%= form.text_field :marks %>
-  <%= form.submit 'Update Marks' %>
-<% end %>

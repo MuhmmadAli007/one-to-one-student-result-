@@ -1,4 +1,4 @@
-<%= form_with model: @result,url: student_result_path(@student), local: false do |form| %>
+<%= form_with model: @result,url: student_result_path(@student), local: true do |form| %>
   <div class="field">
     <%= form.label :marks %>
     <%= form.text_field :marks %>

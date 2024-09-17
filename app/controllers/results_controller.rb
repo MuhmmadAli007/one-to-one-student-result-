@@ -1,5 +1,5 @@
 class ResultsController < ApplicationController
-  before_action :set_result, only: [:new,:edit]
+  before_action :set_result, only: [:new]
   
   def new
     @student = Student.find(params[:student_id])
@@ -21,7 +21,10 @@ class ResultsController < ApplicationController
   end
   
   def edit 
+    @student = Student.find(params[:student_id])
+    @result = @student.result
   end
+  
   def update
     @student = Student.find(params[:student_id])
     @result = @student.result

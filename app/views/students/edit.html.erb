@@ -1,0 +1,15 @@
+<h1>Student Details</h1>
+
+<p>
+  <strong>Name:</strong>
+  <%= @student.name %>
+</p>
+<h1>Edit Student </h1>
+
+<%= form_for(:student, url: students_path) do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+
+  <%= form.submit %>
+<% end %>
+<%link_to 'BACK',students_path%>
